@@ -1,8 +1,9 @@
 """Bloque 16 — Archivos y JSON"""
-import json, os, tempfile
+import json, os
 from utils import mostrar_menu, mostrar_resultado, pedir_con_marco, pedir_opcion, pausar
 
-TMP = tempfile.gettempdir()
+TMP = os.path.join(os.path.dirname(__file__), "..", "datos")
+os.makedirs(TMP, exist_ok=True)
 
 def ejercicio_1():
     ruta = os.path.join(TMP, "poo_texto.txt")
